@@ -5,6 +5,7 @@ def word_gen():
     words = ['new',
              'book',
              'adjustment',
+             'helicopter'
              'airplane',
              "hello"]
     word = random.choice(words)
