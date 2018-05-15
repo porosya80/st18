@@ -9,9 +9,7 @@ def word_gen():
              "hello"]
     word = random.choice(words)
     answer = [x.lower() for x in word]
-
     hidden_word = ["*" for i in range(len(word))]
-
     tries = len(word) + 2
     return tries, hidden_word, answer
 
