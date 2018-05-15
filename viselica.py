@@ -2,7 +2,11 @@ import random
 
 
 def word_gen():
-    words = ['new', 'book', 'adjustment', 'airplane', "hello"]
+    words = ['new',
+             'book',
+             'adjustment',
+             'airplane',
+             "hello"]
     word = random.choice(words)
     answer = [x.lower() for x in word]
 
@@ -12,13 +16,12 @@ def word_gen():
     return tries, hidden_word, answer
 
 
-
 def draw(tries, hidden_word):
     print('Количество попыток : ', tries)
     print('Слово : ' + "".join(hidden_word))
 
 
-def check(answer,hidden_word,tries):
+def check(answer, hidden_word, tries):
     chr = input("Введите букву: ")[0].lower()
     if chr in answer:
         for i, ch in enumerate(answer):
@@ -34,7 +37,7 @@ def main():
     while '*' in hidden_word and tries > 0:
         draw(tries, hidden_word)
         tries, hidden_word = check(answer, hidden_word, tries)
-    print( "You Lose") if tries == 0 else print("You win")
+    print("You Lose") if tries == 0 else print("You win")
 
 
 if __name__ == '__main__':
