@@ -21,10 +21,16 @@ class Person():
         else:
             print(f'{somebody.name} eto che  za huy')
 
+    @staticmethod
+    def count():
+        return 'some'
+
 def main():
-    vasya = Person('Vasya',35)
+    vasya = Person('Vasya', 35)
     grisha = Person('Grisha', 38)
-    petya = Person('Petya',45)
+    petya = Person('Petya', 45)
+
+    print(Person.count())
 
     vasya.know(grisha)
     vasya.know(petya)
@@ -35,3 +41,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
